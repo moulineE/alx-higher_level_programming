@@ -13,13 +13,13 @@ int check_cycle(listint_t *list)
 	listint_t *source = list;
 	listint_t *checker = list;
 
-	while (source->next != NULL)
+	while (source != NULL)
 	{
 		if (source == checker && sn != cn)
 		{
 			return (1);
 		}
-		else if (checker->next != NULL)
+		else if (checker != NULL)
 		{
 			checker = checker->next;
 			cn = cn + 1;
