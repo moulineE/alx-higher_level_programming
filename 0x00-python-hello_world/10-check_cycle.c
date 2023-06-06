@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 	{
 		return (0);
 	}
-	while (source->next != NULL)
+	while (source != NULL)
 	{
 		if ((source == checker) && (sn != cn))
 		{
