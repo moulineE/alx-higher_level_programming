@@ -19,7 +19,7 @@ int check_cycle(listint_t *list)
 	}
 	while (source != NULL)
 	{
-		if ((source == checker) && (sn != cn))
+		if ((source == checker) && (sn != cn) && source != NULL)
 		{
 			return (1);
 		}
