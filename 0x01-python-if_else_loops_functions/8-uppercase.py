@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 def uppercase(str):
     """prints a string in uppercase followed by a new line."""
-    for char in str:
-        if ord(char) > 96 and ord(char) < 123:
-            char = chr(ord(char) - 32)
+    for c in str:
+        if ord(c) > 96 and ord(c) < 123:
+            c = chr(ord(c) - 32)
 
-        print("{}".format(char), end="")
+        print("{}".format(c), end="")
 
     print()
