@@ -21,8 +21,6 @@ int is_palindrome(listint_t **head)
 		reader = reader->next;
 
 	}
-	if (count % 2 != 0)
-		return (0);
 	pal_array = malloc(count * sizeof(int));
 	if (pal_array == NULL)
 	{
