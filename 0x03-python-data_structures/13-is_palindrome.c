@@ -22,17 +22,20 @@ int is_palindrome(listint_t **head)
 
 	}
 	pal_array = malloc(count * sizeof(int));
-	if (pal_array == NULL)
-	{
-		free(pal_array);
-		return (0);
-	}
 	reader = *head;
 	while (reader != NULL)
 	{
 		pal_array[i] = reader->n;
-		 reader = reader->next;
-		 i++;
+		reader = reader->next;
+		if ((count % 2 == 0) && (i == (count / 2) - 1) && count > 2)
+		{
+			if (!(reader->n == reader->next->n))
+			{
+				free(pal_array);
+				return (0);
+			}
+		}
+		i++;
 	}
 	i = i - 1;
 	for (y = 0; y < i; i--)
