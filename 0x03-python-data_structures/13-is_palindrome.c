@@ -31,8 +31,8 @@ int is_palindrome(listint_t **head)
 	while (reader != NULL)
 	{
 		pal_array[i] = reader->n;
-		 reader = reader->next;
-		 i++;
+		reader = reader->next;
+		i++;
 	}
 	i = i - 1;
 	for (y = 0; y < i; i--)
