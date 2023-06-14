@@ -22,11 +22,6 @@ int is_palindrome(listint_t **head)
 
 	}
 	pal_array = malloc(count * sizeof(int));
-	if (pal_array == NULL)
-	{
-		free(pal_array);
-		return (0);
-	}
 	reader = *head;
 	for (i = 0; reader != NULL; i++)
 	{
