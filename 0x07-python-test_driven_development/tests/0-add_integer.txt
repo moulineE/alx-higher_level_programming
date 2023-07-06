@@ -35,4 +35,3 @@ then use it like "+" with integer or float
 	>>> add_integer(3, "test")
 	Traceback (most recent call last):
         TypeError: b must be an integer
-	
