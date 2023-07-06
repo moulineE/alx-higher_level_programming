@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module define a fonction 
+"""This module define a fonction
 that add two integre with the second
 is by default 98
 """
