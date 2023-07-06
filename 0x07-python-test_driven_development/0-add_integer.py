@@ -2,6 +2,7 @@
 """This module define a fonction
 that add two integre with the second
 is by default 98
+a and b must be integers or floats
 """
 
 
