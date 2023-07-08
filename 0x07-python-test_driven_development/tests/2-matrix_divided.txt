@@ -1,0 +1,22 @@
+The ``add_divided`` module
+======================
+
+Using ``add_divided``
+-------------------
+
+This is a module that divides all elements of a matrix.
+
+Now use it:
+fist import the module and define a matrix
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+then use it like "/" with 
+
+	>>> matrix = [
+	... [2, 4 ,6],
+	... [8, 10, 12],
+	... ]
+
+	>>> print(matrix_divided(matrix, 2))
+	[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
