@@ -31,6 +31,10 @@ then use it like "/" with
     	Traceback (most recent call last):
     	TypeError: div must be a number
 
+	>>> matrix = []
+	>>> print(matrix_divided(matrix, 2))
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 	>>> matrix = "string"
     	>>> print(matrix_divided(matrix, 2))
