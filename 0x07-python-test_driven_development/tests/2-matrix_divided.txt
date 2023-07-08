@@ -64,3 +64,10 @@ then use it like "/" with
 	... ]
 	>>> print(matrix_divided(matrix, 2))
 	[[1.1, 2.2, 3.3], [4.4, 5.05, 6.06]]
+
+	>>> matrix = [
+	... [2.2, -4.4, 6.6],
+	... [-8.8, 10.10, 12.12],
+	... ]
+	>>> print(matrix_divided(matrix, 2))
+	[[1.1, -2.2, 3.3], [-4.4, 5.05, 6.06]]
