@@ -23,6 +23,7 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: is div == 0
     """
     if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for  row in matrix) or
             not all((isinstance(digit, int) or isinstance(digit, float))
                     for digit in [num for row in matrix for num in row])):
         raise TypeError("matrix must be a matrix (list of lists)"
