@@ -9,30 +9,35 @@ This is a fuction that that prints the list, but sorted
 Now use it:
 fist import the module
 
-	>>> MyList = __import__('1-my_list').MyList
+>>> MyList = __import__('1-my_list').MyList
 
 than use it to like that:
 
-	>>> my_list = MyList()
-	>>> my_list.append(1)
-	>>> my_list.append(4)
-	>>> my_list.append(2)
-	>>> my_list.append(3)
-	>>> my_list.append(5)
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
-	>>> my_list.print_sorted()
-	[1, 2, 3, 4, 5]
-	>>> print(my_list)
-	[1, 4, 2, 3, 5]
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
 
-	>>> list_2 = []
-	>>> my_list = MyList(list_2)
-	>>> my_list.print_sorted()
-	[]
+>>> list_2 = []
+>>> my_list = MyList(list_2)
+>>> my_list.print_sorted()
+[]
 
-	>>> list_3 = [0]
-        >>> my_list = MyList(list_3)
-        >>> my_list.print_sorted()
-        [0]
+>>> list_3 = [0]
+>>> my_list = MyList(list_3)
+>>> my_list.print_sorted()
+[0]
 
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list4.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'my_list4' is not defined
