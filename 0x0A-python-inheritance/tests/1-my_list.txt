@@ -25,3 +25,14 @@ than use it to like that:
 	[1, 2, 3, 4, 5]
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+	>>> list_2 = []
+	>>> my_list = MyList(list_2)
+	>>> my_list.print_sorted()
+	[]
+
+	>>> list_3 = [0]
+        >>> my_list = MyList(list_3)
+        >>> my_list.print_sorted()
+        [0]
+
