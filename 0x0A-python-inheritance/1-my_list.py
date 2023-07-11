@@ -9,4 +9,3 @@ class MyList(list):
     def print_sorted(self):
         """Public instance method that prints the list, but sorted"""
         return (sorted(self))
-
