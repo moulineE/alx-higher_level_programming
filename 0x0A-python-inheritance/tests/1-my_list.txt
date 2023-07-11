@@ -41,3 +41,14 @@ than use it to like that:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'my_list4' is not defined
+
+>>> list_5 = [0, 797, 51, 1]
+>>> my_list = MyList(list_5)
+>>> my_list.print_sorted()
+[0, 1, 51, 797]
+
+
+>>> list_6 = [0, 797, 51, 1, -5, 10, -545]
+>>> my_list = MyList(list_6)
+>>> my_list.print_sorted()
+[-545, -5, 0, 1, 10, 51, 797]
