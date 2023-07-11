@@ -3,7 +3,7 @@
 text file and return the number of character added"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """a function that appends a string at the end of a text file (UTF8)
     and returns the number of characters added
 
