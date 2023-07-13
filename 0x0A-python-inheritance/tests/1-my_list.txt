@@ -39,7 +39,6 @@ than use it to like that:
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list4.print_sorted()
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
 NameError: name 'my_list4' is not defined
 
 >>> list_5 = [0, 797, 51, 1]
@@ -52,3 +51,12 @@ NameError: name 'my_list4' is not defined
 >>> my_list = MyList(list_6)
 >>> my_list.print_sorted()
 [-545, -5, 0, 1, 10, 51, 797]
+
+>>> my_list7 = MyList()
+>>> my_list7.append(0)
+>>> my_list7.append(0)
+>>> my_list7.append(0)
+>>> my_list7.append(0)
+>>> my_list7.append(0)
+>>> print(my_list7)
+[0, 0, 0, 0, 0]
