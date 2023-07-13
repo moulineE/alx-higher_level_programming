@@ -4,7 +4,12 @@ sorted"""
 
 
 class MyList(list):
-    """subclass that sorte a list and print it"""
+    """subclass that sorte a list and print it
+
+    Attributes:
+        list (list): a list of integer
+
+    """
 
     def print_sorted(self):
         """Public instance method that prints the list, but sorted"""
