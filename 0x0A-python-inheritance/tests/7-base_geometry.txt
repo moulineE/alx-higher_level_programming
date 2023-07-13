@@ -36,6 +36,11 @@ test4:
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
+teste7:
+bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
 Unhandled Error:
 
 teste5:
