@@ -22,33 +22,39 @@ test1:
 Handled Error:
 
 test2:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
 
 test3:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
 test4:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
 teste7:
-bg.area()
+>>> bg = BaseGeometry()
+>>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
 
 Unhandled Error:
 
 teste5:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 teste6:
+>>> bg = BaseGeometry()
 >>> bg2.integer_validator("my_int", 12)
 Traceback (most recent call last):
 NameError: name 'bg2' is not defined
