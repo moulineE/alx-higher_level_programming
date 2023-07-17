@@ -113,7 +113,7 @@ class Rectangle(Base):
         **kwargs (int): assigns a key/value argument to attributes
 
         """
-        if (len(args) != 0 and not (args in None)):
+        if (len(args) != 0 and args):
             attr_len = len(args)
             if attr_len >= 1:
                 self.id = args[0]

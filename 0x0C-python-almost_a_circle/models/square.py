@@ -32,3 +32,36 @@ class Square(Rectangle):
         """overriding the __str__ method"""
         return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id,
                                              self.x, self.y, self.size)
+
+    def update(self, *args, **kwargs):
+        """public method that assigns attributes:
+
+        Args:
+            *args (int):  is the list of arguments - no-keyworded arguments
+            1st argument should be the id attribute
+            2nd argument should be the size attribute
+            3rd argument should be the x attribute
+            4th argument should be the y attribute
+            **kwargs (int): assigns a key/value argument to attributes
+
+        """
+        if (len(args) != 0 and args):
+            attr_len = len(args)
+            if attr_len >= 1:
+                self.id = args[0]
+            if attr_len >= 2:
+                self.width = args[1]
+            if attr_len >= 3:
+                self.x = args[2]
+            if attr_len >= 4:
+                self.y = args[3]
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "size":
+                    self.size = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
