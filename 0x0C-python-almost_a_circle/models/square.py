@@ -17,3 +17,18 @@ class Square(Rectangle):
 
         """
         super().__init__(size, size, x, y, id)
+
+    @property
+    def size(self):
+        """int: get and set the size of the rectangle"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
+
+    def __str__(self):
+        """overriding the __str__ method"""
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x,
+                                                       self.y, self.size)
