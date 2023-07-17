@@ -61,7 +61,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-        
+
     @property
     def y(self):
         """int: get and set the y position of the rectangle"""
@@ -89,3 +89,9 @@ class Rectangle(Base):
             for i in range(self.height):
                 print("#" * self.width, end="")
                 print()
+
+    def __str__(self):
+        """overriding the __str__ method"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)
