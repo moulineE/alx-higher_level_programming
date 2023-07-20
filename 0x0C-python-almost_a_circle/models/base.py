@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module define a "Base" class"""
 import json
+import csv
 
 
 class Base:
@@ -103,5 +104,49 @@ class Base:
             with open(filename, "r") as f:
                 return [cls.create(**dct) for dct in
                         Base.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """class method that writes the csv representation of
+        list_objs to a file:
+
+        Args:
+            list_objs (lsit): a list of instances of Base
+
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline='') as csvfile:
+            if list_objs is None or list_objs is []:
+                csvfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            for i in list_objs:
+                writer.writerow(i.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """class method that returns a list of instances from a file
+
+        Returns:
+                return a list of instances
+
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline='') as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                reader = csv.DictReader(csvfile, fieldnames=fieldnames)
+                reader = [dict([key, int(value)] for key, value in d.items())
+                          for d in reader]
+                return [cls.create(**d) for d in reader]
         except FileNotFoundError:
             return []
