@@ -2,6 +2,7 @@
 """This module define a "Base" class"""
 import json
 import csv
+import turtle
 
 
 class Base:
@@ -150,3 +151,38 @@ class Base:
                 return [cls.create(**d) for d in reader]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """static method that opens a window and draws
+        all the Rectangles and Squares
+
+        Args:
+            list_rectangles (list) a list of rectangles to draw
+            list_squares (list) a list a squares to draw
+
+        """
+        wn = turtle.Screen()
+        wn.bgcolor("light green")
+        wn.title("Task 21")
+        skk = turtle.Turtle()
+
+        for rec in list_rectangles:
+            skk.penup()
+            skk.goto(rec.x, rec.y)
+            skk.pendown()
+            for i in range(2):
+                skk.forward(rec.width)
+                skk.right(90)
+                skk.forward(rec.height)
+                skk.right(90)
+
+        for sq in list_squares:
+            skk.penup()
+            skk.goto(sq.x, sq.y)
+            skk.pendown()
+            for i in range(4):
+                skk.forward(sq.size)
+                skk.right(90)
+        
+        turtle.exitonclick()
