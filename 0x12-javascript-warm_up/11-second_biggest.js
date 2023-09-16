@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 if (process.argv.length < 4) {
-  console.log('0');
+  console.log(0);
 } else {
   let big = process.argv[2];
   let secBig = process.argv[2];
