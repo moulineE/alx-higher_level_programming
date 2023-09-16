@@ -1,4 +1,4 @@
-```markdown
+
 # Python - Object-Relational Mapping
 
 ![Python](https://img.shields.io/badge/Python-3.8.5-blue)
@@ -61,8 +61,9 @@ To run any of the provided scripts, use the following format:
 
 ```bash
 $ ./script_name.py <username> <password> <database_name> <additional_arguments>
+```
 
 ## License
 
 This project is protected by the ALX license. All rights reserved.
-```
+
