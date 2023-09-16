@@ -1,5 +1,3 @@
-Sure, I can help you create a README file for your GitHub project based on the tasks you provided. Here's a README template for your GitHub project:
-
 ```markdown
 # Python - Object-Relational Mapping
 
