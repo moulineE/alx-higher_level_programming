@@ -11,6 +11,7 @@ This project demonstrates the use of Object-Relational Mapping (ORM) in Python, 
 - [Background Context](#background-context)
 - [Before You Start](#before-you-start)
 - [Tasks](#tasks)
+  
   0. [Get all states](#0-get-all-states)
   1. [Filter states](#1-filter-states)
   2. [Filter states by user input](#2-filter-states-by-user-input)
