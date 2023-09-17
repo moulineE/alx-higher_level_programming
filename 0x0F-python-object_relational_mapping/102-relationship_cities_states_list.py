@@ -17,5 +17,5 @@ if __name__ == "__main__":
     session = Session()
     for state in session.query(State):
         for city in state.cities:
-            print("{}: {} -> {}".format(city.id, City.name, state.name))
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
     session.close()
