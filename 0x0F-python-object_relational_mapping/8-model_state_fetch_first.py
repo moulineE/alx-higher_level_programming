@@ -13,9 +13,8 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    Base.metadata.create_all(engine)
-    for row in session.query(State).filter_by(id='1'):
-        if row.id == 1:
-            print("{}: {}".format(row.id, row.name))
-        else:
-            print("Nothing")
+    query = session.query(State).order_by(State.id).first()
+    if query:
+        print("{}: {}".format(query.id, query.name))
+    else:
+        print("Nothing")
